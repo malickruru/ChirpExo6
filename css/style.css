@@ -1,0 +1,467 @@
+@import "helper.css";
+@import "button.css";
+
+
+@font-face {
+    font-family: "Inter" ;
+    src: url("../fonts/Inter/Inter-Regular.ttf");
+}
+@font-face {
+    font-family: "Inter-Bold" ;
+    src: url("../fonts/Inter/Inter-Bold.ttf");
+}
+
+/*style généraux*/
+
+:root{
+    --avatarleft:23px;
+}
+
+
+
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    color: #737373;
+    background-color: #FBF8F3;
+}
+
+h1,h2,h3,h4,h5,h6{
+    color: black;
+    font-family: "Inter-Bold";
+}
+
+h1{
+    font-size: 2rem;
+}
+
+.logo
+{
+    color: #3180F5;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 1.5em;
+}
+
+.container
+{
+    padding-left:15px;
+    padding-right: 15px;
+}
+
+.header
+{
+    padding-top: 35px ;
+    padding-bottom:35px;
+}
+
+a{
+    text-decoration: none;
+    color: #1F7898;
+}
+
+/*header*/
+.buttonHeader{
+    display: none;
+}
+.menuHeader{
+    display: none;
+}
+
+
+
+/*hero section*/
+
+.LearnMore1 {
+    display: none;
+}
+
+.hero-section-image-container img{
+    width: 100%;
+    height: auto;
+}
+
+.hero-section h1{
+    font-weight: 800;
+}
+
+.useravatarlist{
+    display: flex;
+}
+
+.useravatarlist img:not(:first-child){
+    left: var(--avatarleft);
+    position: absolute;
+}
+
+.useravatarlist img:nth-child(3){
+      left:calc(var(--avatarleft) * 2);
+      z-index:2 ;
+}
+.useravatarlist img:nth-child(4){
+      left:calc(var(--avatarleft) * 3);
+      z-index:3 ;
+}
+.useravatarlist img:nth-child(5){
+      left:calc(var(--avatarleft) * 4);
+      z-index:4 ;
+}
+.useravatarlist img:nth-child(6){
+      left:calc(var(--avatarleft) * 5);
+      z-index:5 ;
+}
+.useravatarlist img:nth-child(7){
+      left:calc(var(--avatarleft) * 6);
+      z-index:6 ;
+}
+.useravatarlist img:nth-child(8){
+      left:calc(var(--avatarleft) * 7);
+      z-index:7 ;
+}
+.useravatarlist img:nth-child(9){
+      left:calc(var(--avatarleft) * 8);
+      z-index:8 ;
+}
+
+/*fin hero section*/
+/*-----------------------------------------------*/
+
+/*features section*/
+
+.Features-Section{
+    background-color: #fff;
+    padding:20px 0;
+}
+
+.card{
+    border:#b4b4b4 solid 1px ;
+    border-radius:2% ;
+    margin: 20px 0;
+    padding: 15px 10px 5px 10px;
+    box-sizing: border-box;
+
+}
+
+.card h4{
+    margin: 10px 0;
+}
+
+.card img{
+    width: 50px;
+    height: auto;
+}
+
+/*fin featuers section*/
+/*-------------------------------------------*/
+/*customers-section*/
+
+.customers-section{
+    background-color: #D7F5F5;
+    padding:20px 0;
+}
+
+.customers-section img{
+    width: 100%;
+    height: auto;
+    margin: 5px 0;
+}
+
+/*fincustomers-section section*/
+/*-------------------------------------------*/
+/*pricing section*/
+.pricing-section{
+    background-color: #fff;
+    padding:20px 0 30px 0;
+}
+
+.price{
+    border: orange 1px solid;
+    border-radius: 2%;
+    padding: 15px 10px 15px 10px;
+    background-color: #FBF8F3;
+}
+
+.Monthly{
+    margin: 2px 0;
+    font-size: 1.6rem;
+}
+
+.Amounth{
+    margin: 2px 0;
+    font-size: 3rem;
+}
+
+.Amounth::after{
+    content: "/mo";
+    color: #737373;
+    position: relative;
+    font-size: 1.5rem;
+    bottom: 0;
+}
+
+.PriceContainer{
+    border-bottom: #737373 0.3px solid ;
+    width: 80%;
+    margin: auto;
+}
+
+.priceList{
+    list-style-image: url('../Assets/checked2.png');
+}
+
+
+
+.priceList li{
+    padding: 0 0 0 0;   
+    line-height: 30px;
+}
+
+.Buttonprice{
+    padding: 10px 0;
+}
+
+
+/*pricing section section*/
+/*-------------------------------------------*/
+/*footer*/
+
+.footer{
+    background-color: #D7F5F5;
+}
+
+.footerOption{
+    width: 90%;
+}
+
+/*footer*/
+/*-------------------------------------------*/
+
+
+/*Point d'arret tablette*/
+
+@media screen and (min-width : 768px ) {
+    
+    .container
+{
+    padding-left:25px;
+    padding-right: 25px;
+}
+    
+    
+    /*header*/
+
+    .menuhamburger{
+        display: none;
+    }
+
+    .buttonHeader{
+        display: flex;
+    }
+    .menuHeader{
+        display: flex;
+        list-style: none;
+        width: 60%;
+    }
+
+    .menuHeader li{
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .button-flex{
+        width: 30%;}
+
+/*section hero*/
+
+.HeroImage{
+    content: url('../Assets/Hero_Image_Tablet_View.png');
+}
+
+.LearnMore2{
+    display: none;
+}
+
+.LearnMore1{
+    display: inline;
+    position: relative;
+    top: -30px;
+    left: 250px;
+}
+
+/*custumersection*/
+
+.customers-section img{
+    width: 30%;
+    height: auto;
+    margin: 5px 5px;
+}
+
+.tweetImg{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/*pricing*/
+
+.price{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.PriceSectionButton{
+    width: 100%;
+}
+
+.footerContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.footerOption{
+    width: 40%;
+}
+
+}
+
+
+/*footer*/
+/*-------------------------------------------*/
+
+
+/*Point d'arret laptop*/
+
+
+
+@media screen and (min-width : 1024px ){
+
+    .container
+{
+    padding-left:100px;
+    padding-right: 100px;
+}
+
+ /*header*/
+
+
+.buttonHeader{
+    display: flex;
+}
+.menuHeader{
+    display: flex;
+    list-style: none;
+    width: 60%;
+}
+
+.menuHeader li{
+    font-size: 20px;
+    padding: 10px;
+}
+
+.menuHeader li:last-child{
+    padding-right: 0;
+}
+
+
+.button-flex{
+    width: 20%;}
+
+/*hero section*/
+
+.HerosectoinGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.HeroImage{
+    content: url('../Assets/Hero_Image_Tablet_View.png');
+    width: 40vw;
+    height: auto;
+}
+
+.hero-section-image-container{
+    grid-area: 1/2;
+}
+
+.hero-section-text-container
+{
+    padding: 5px 25px ;
+    position: relative;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+.boutonHero
+{
+width: 40%;
+}
+
+.useravatarlist img{
+    left: var(--avatarleft);
+    position: relative;
+}
+
+.LearnMore1{
+    display: inline;
+    position: relative;
+    top: -30px;
+    left: 300px;
+}
+
+.hero-section{
+    padding-bottom: 30px;
+}
+
+
+
+/*features section*/
+.Features-Section h1
+{
+ width:30%;
+}
+
+.FeatureSectionGrid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    
+}
+
+.FeatureSectionGrid .card  {
+   width: 40vw;
+}
+
+.FeatureSectionGrid .card p{
+    font-size: 1.5rem; 
+}
+
+/*pricing*/
+.price{
+    width: 30%;
+    margin: 0 auto;
+}
+
+.PriceSectionButton{
+    width: 100%;
+}
+
+.footerContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.footerOption{
+    width: 30%;
+}
+
+
+}
